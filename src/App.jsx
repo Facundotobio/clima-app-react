@@ -1,7 +1,8 @@
 import React from 'react';
 import BuscadorClima from './components/BuscadorClima';
 import Footer from './components/Footer';
-import '../src/App.css';
+import './App.css';
+
 
 function App() {
   return (
