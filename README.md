@@ -47,5 +47,7 @@ Facundo Tobio
 🛡️ Todos los derechos reservados ©
 
 https://facundo-tobio-portfolio.vercel.app/
+
 https://www.linkedin.com/in/facundo-tobio/
+
 https://github.com/Facundotobio
