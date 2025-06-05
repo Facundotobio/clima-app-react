@@ -1,12 +1,51 @@
-# React + Vite
+# 🌤️ Clima App - Pronóstico y Comparación de Clima
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web que permite consultar el clima actual y pronóstico extendido de 1 a 14 días de una ciudad en específico, así como comparar el clima entre dos ubicaciones para distintos días. Ofrece una interfaz clara, amigable y con validaciones que mejoran la experiencia de usuario.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Objetivo del Proyecto
 
-## Expanding the ESLint configuration
+Brindar una herramienta práctica para consultar y comparar condiciones climáticas, útil para viajeros, planificadores de actividades al aire libre y cualquier persona interesada en conocer el pronóstico del clima en distintas ciudades del mundo.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Tecnologías Utilizadas
+
+### 🧠 Backend (API REST)
+- **.NET 8**
+- **ASP.NET Core Web API**
+- **C#**
+- **HttpClient** para consumo de APIs externas
+- **Newtonsoft.Json** para deserialización
+- Arquitectura separada por capas (Controller, Service, Client)
+
+### 🌐 Frontend
+- **React 18**
+- **Vite** como bundler
+- **JavaScript (ES6+)**
+- **CSS Modules** para estilos scoped
+- **React Icons** (`react-icons/md`, `react-icons/io5`) para íconos visuales
+- **Fetch API** para llamadas HTTP al backend
+- **.env** para configuración de variables de entorno (`VITE_BACK_API_BASE_URL`)
+
+---
+
+## 📦 Funcionalidades
+
+- 🔍 Consultar el clima actual y el pronóstico para cualquier ciudad de 1 a 14 días.
+- 🌐 Comparar el clima entre dos ciudades distintas para el mismo rango de días.
+- 🚫 Validaciones de entrada para evitar consultas inválidas o duplicadas.
+- ✅ Mensajes de error claros tanto del frontend como del backend.
+- 📋 Footer persistente con datos del autor.
+
+---
+
+👨‍💻 Autor y redes de contacto
+Facundo Tobio
+📅 2025
+🛡️ Todos los derechos reservados ©
+
+https://facundo-tobio-portfolio.vercel.app/
+https://www.linkedin.com/in/facundo-tobio/
+https://github.com/Facundotobio
