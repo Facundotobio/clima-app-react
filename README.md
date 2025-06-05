@@ -42,6 +42,7 @@ Brindar una herramienta práctica para consultar y comparar condiciones climáti
 ---
 
 👨‍💻 Autor y redes de contacto
+
 Facundo Tobio
 📅 2025
 🛡️ Todos los derechos reservados ©
