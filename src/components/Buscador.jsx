@@ -51,7 +51,7 @@ export default function Buscador({ modo = 'simple', onBuscar }) {
         </select>
       </div>
       <button type="submit" className={styles.button}>
-        {modo === 'simple' ? 'Consultar clima' : 'Comparar Clima'}
+        {modo === 'simple' ? 'Consultar clima' : 'Comparar clima'}
       </button>
     </form>
   );
