@@ -2,6 +2,9 @@
 
 Aplicación web que permite consultar el clima actual y pronóstico extendido de 1 a 14 días de una ciudad en específico, así como comparar el clima entre dos ubicaciones para distintos días. Ofrece una interfaz clara, amigable y con validaciones que mejoran la experiencia de usuario.
 
+🔗 **Versión en línea:**  
+https://clima-app-react-ten.vercel.app/
+
 ---
 
 ## 📌 Objetivo del Proyecto
