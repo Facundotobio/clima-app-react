@@ -61,19 +61,21 @@ export default function BuscadorClima() {
   };
 
   return (
-    <div className={styles.contenedor}>
-      <h1 className={styles.titulo}>Consulta y compara el clima</h1>
+    <div className={styles.contenedor} data-cy="contenedor-principal">
+      <h1 className={styles.titulo} data-cy="titulo">Consulta y compara el clima</h1>
 
-      <div className={styles.modoContenedor}>
+      <div className={styles.modoContenedor} data-cy="modoContenedor">
         <button
           className={`${styles.botonModo} ${modo !== 'simple' ? styles.inactivo : ''}`}
           onClick={() => setModo('simple')}
+          data-cy="boton-busqueda"
         >
           Búsqueda
         </button>
         <button
           className={`${styles.botonModo} ${modo !== 'comparar' ? styles.inactivo : ''}`}
           onClick={() => setModo('comparar')}
+          data-cy="boton-comparar"
         >
           Comparar clima
         </button>
@@ -82,17 +84,17 @@ export default function BuscadorClima() {
       <Buscador modo={modo} onBuscar={handleBuscar} />
 
       {error && (
-        <div className={styles.error}>
+        <div className={styles.error} data-cy="error">
           <MdErrorOutline className={styles.iconoError} />
           <span>{error}</span>
-          <button className={styles.cerrarError} onClick={() => setError('')}>
+          <button className={styles.cerrarError} onClick={() => setError('')} data-cy="cerrar-error">
             <IoClose />
           </button>
         </div>
       )}
 
-      {resultado?.tipo === 'simple' && <ResultadoClima pronostico={resultado.data} />}
-      {resultado?.tipo === 'comparacion' && <ResultadoComparacion comparacion={resultado.data} />}
+      {resultado?.tipo === 'simple' && <ResultadoClima pronostico={resultado.data} data-cy="resultado-clima" />}
+      {resultado?.tipo === 'comparacion' && <ResultadoComparacion comparacion={resultado.data} data-cy="resultado-comparacion" />}
     </div>
   );
 }

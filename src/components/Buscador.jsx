@@ -18,8 +18,8 @@ export default function Buscador({ modo = 'simple', onBuscar }) {
   };
 
   return (
-    <form onSubmit={manejarSubmit} className={styles.form}>
-      <div className={styles.inputsContainer}>
+    <form onSubmit={manejarSubmit} className={styles.form} data-cy="form">
+      <div className={styles.inputsContainer} data-cy="inputsContainer">
         <input
           type="text"
           placeholder="Ingrese el destino"
@@ -27,6 +27,7 @@ export default function Buscador({ modo = 'simple', onBuscar }) {
           onChange={(e) => setCiudad(e.target.value)}
           className={styles.input}
           required
+          data-cy="input-ciudad"
         />
         {modo === 'comparar' && (
           <input
@@ -36,12 +37,14 @@ export default function Buscador({ modo = 'simple', onBuscar }) {
             onChange={(e) => setCiudad2(e.target.value)}
             className={styles.input}
             required
+            data-cy="input-ciudad2"
           />
         )}
         <select
           value={dias}
           onChange={(e) => setDias(Number(e.target.value))}
           className={styles.select}
+          data-cy="select-dias"
         >
           {Array.from({ length: 14 }, (_, i) => i + 1).map((num) => (
             <option key={num} value={num}>
@@ -50,7 +53,7 @@ export default function Buscador({ modo = 'simple', onBuscar }) {
           ))}
         </select>
       </div>
-      <button type="submit" className={styles.button}>
+      <button type="submit" className={styles.button} data-cy="boton-submit">
         {modo === 'simple' ? 'Consultar clima' : 'Comparar clima'}
       </button>
     </form>

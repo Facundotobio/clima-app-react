@@ -8,13 +8,13 @@ export default function ResultadoClima({ pronostico }) {
   const dias = forecast?.pronosticoDias || [];
 
   return (
-    <div className={styles.resultadoClima}>
+    <div className={styles.resultadoClima} data-cy="resultado-clima">
       <h2>Pronóstico para {localizacion.nombre}, {localizacion.pais}</h2>
       <p>Hora local: {localizacion.horaLocal}</p>
 
-      <div className={styles.diasContainer}>
+      <div className={styles.diasContainer} data-cy="diasContainer">
         {dias.map((dia) => (
-          <div key={dia.fecha} className={styles.dia}>
+          <div key={dia.fecha} className={styles.dia} data-cy="dia">
             <h3>{dia.fecha}</h3>
             <p>{dia.dia.condicion.descripcion}</p>
             <img

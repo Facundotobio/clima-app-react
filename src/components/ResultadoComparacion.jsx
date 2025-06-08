@@ -7,16 +7,16 @@ export default function ResultadoComparacion({ comparacion }) {
   const { ciudad1, ciudad2 } = comparacion;
 
   return (
-    <div className={styles.resultadoComparacion}>
+    <div className={styles.resultadoComparacion} data-cy="resultado-comparacion">
       <h2>Comparación entre {ciudad1.localizacion.nombre} y {ciudad2.localizacion.nombre}</h2>
-      <div className={styles.comparacionContainer}>
+      <div className={styles.comparacionContainer} data-cy="comparacionContainer">
         {[ciudad1, ciudad2].map((ciudad, idx) => (
-          <div key={idx} className={styles.ciudad}>
+          <div key={idx} className={styles.ciudad} data-cy="ciudad-comparada">
             <h3>{ciudad.localizacion.nombre}, {ciudad.localizacion.pais}</h3>
             <p>Hora local: {ciudad.localizacion.horaLocal}</p>
-            <div className={styles.diasContainer}>
+            <div className={styles.diasContainer} data-cy="diasContainer">
               {ciudad.pronostico.pronosticoDias.map((dia) => (
-                <div key={dia.fecha} className={styles.dia}>
+                <div key={dia.fecha} className={styles.dia} data-cy="dia">
                   <h4>{dia.fecha}</h4>
                   <p>{dia.dia.condicion.descripcion}</p>
                   <img

@@ -44,6 +44,64 @@ Brindar una herramienta práctica para consultar y comparar condiciones climáti
 
 ---
 
+## 🧪 Pruebas automatizadas (Cypress)
+
+La aplicación cuenta con pruebas end-to-end (E2E) automatizadas usando [Cypress](https://www.cypress.io/), ubicadas en la carpeta `cypress/e2e/`.
+
+### 🎯 Objetivos de las pruebas
+- Validar funcionalidades exitosas: búsqueda y comparación de clima.
+- Validar flujos con errores y validaciones.
+- Verificar renderizado de componentes importantes (título, botones, selectores, etc.).
+- Validar comportamiento de la UI frente a inputs inválidos y vacíos.
+- Probar el comportamiento responsivo en dispositivos móviles.
+
+### 📋 Escenarios cubiertos
+
+#### ✅ Casos exitosos
+- **Búsqueda simple exitosa:** Ingresar "Buenos Aires", seleccionar 7 días, buscar y verificar datos del clima.
+- **Comparación exitosa:** Ingresar "Buenos Aires" y "Córdoba", seleccionar modo comparación y verificar datos de ambas ciudades.
+- **Renderizado de elementos clave:** Se verifica la presencia de `.titulo`, `.form`, `.select`, `.modoContenedor`, `.button`.
+- **Cambio de modo de consulta:** Se valida que el cambio de modo oculta o muestra campos correctamente.
+
+#### ❌ Casos con errores y validaciones
+- **Ciudad inválida:** Ingresar texto inválido (ej: "W") y esperar mensaje de error.
+- **Comparación con un solo campo:** Solo llenar una ciudad en modo comparación y esperar validación.
+- **Formulario vacío:** Clickear buscar sin completar nada y esperar validaciones obligatorias.
+- **Ciudades duplicadas:** Ingresar "Salta" y "Salta" y mostrar advertencia.
+- **Números o símbolos:** Ingresar "123" o "@@@" y validar error o bloqueo.
+
+#### 📱 Pruebas responsivas
+- Simular viewport móvil (< 450px) y validar:
+  - `.form` se ajusta a `max-width: 500px`.
+  - Inputs y select se apilan verticalmente.
+  - El botón `.button` siempre es visible y accesible.
+  - Padding vertical aumentado.
+
+#### 🧪 Comportamiento esperado
+- En resultados exitosos: datos del clima en pantalla.
+- En fallos: componente `.error` con mensaje explicativo.
+- En responsivo: layout cambia correctamente y mantiene funcionalidad.
+
+### 📂 Estructura de archivos de prueba
+
+- `busqueda_exitosa.cy.js`: Pruebas de búsqueda simple exitosa.
+- `comparacion_invalida.cy.js`: Pruebas de comparación con errores y validaciones.
+- `validaciones.cy.js`: Pruebas de validaciones y errores generales.
+
+### ▶️ Cómo ejecutar las pruebas
+
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+2. Ejecutar Cypress:
+   ```bash
+   npx cypress open
+   ```
+3. Seleccionar el archivo de prueba y correrlo en el navegador.
+
+---
+
 👨‍💻 Autor y redes de contacto
 
 Facundo Tobio
