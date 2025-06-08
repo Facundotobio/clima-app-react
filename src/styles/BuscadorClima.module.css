@@ -101,3 +101,19 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+
+.titulo{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.botonModo{
+  font-size: 0.8rem;
+  
+}
+
+.error{
+  font-size: 0.8rem;
+}
+}

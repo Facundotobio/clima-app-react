@@ -73,3 +73,14 @@
   margin: 0.2rem 0;
   font-size: 0.95rem;
 }
+
+@media screen and (max-width: 450px) {
+
+.resultadoComparacion h2{
+  font-size: 1.2rem;
+}
+  
+.ciudad h3{
+  font-size: 1rem;
+}
+}

@@ -54,3 +54,30 @@
   background-color: #0277bd;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+@media screen and (max-width: 450px) {
+
+.form{
+  max-width: 80%;
+  padding: 2rem 1rem;
+
+}
+
+.inputsContainer {
+  flex-direction: column; /* Cambia de fila a columna */
+  gap: 0.75rem;
+}
+
+.input{
+  font-size: 0.8rem;
+  /* min-width: 100px; */
+}
+
+.select{
+  font-size: 0.8rem;
+}
+
+.button{
+  font-size: 0.8rem;
+}
+}

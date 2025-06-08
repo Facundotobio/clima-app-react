@@ -8,4 +8,10 @@
     background-color: #f9f9f9;    
     height: 40px;
   }
+
+  @media screen and (max-width: 450px) {
+    .footer{
+      font-size: 0.8rem;
+    }
+  }
   
