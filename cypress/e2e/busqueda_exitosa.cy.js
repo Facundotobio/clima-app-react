@@ -12,6 +12,12 @@ describe('Búsqueda simple exitosa y renderizado de elementos clave', () => {
     cy.get('[data-cy="boton-comparar"]').should('exist');
   });
 
+  it('Renderiza el Footer correctamente', () => {
+    cy.get('footer').should('exist');
+    cy.get('footer').should('contain.text', 'Facundo Tobio');
+    cy.get('footer').should('contain.text', 'Todos los derechos reservados');
+  });
+
   it('Realiza una búsqueda exitosa', () => {
     cy.get('[data-cy="input-ciudad"]').type('Buenos Aires');
     cy.get('[data-cy="select-dias"]').select('7 días');

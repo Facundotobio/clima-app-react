@@ -61,10 +61,11 @@ La aplicación cuenta con pruebas end-to-end (E2E) automatizadas usando [Cypress
 - **Búsqueda simple exitosa:** Ingresar "Buenos Aires", seleccionar 7 días, buscar y verificar datos del clima.
 - **Comparación exitosa:** Ingresar "Buenos Aires" y "Córdoba", seleccionar modo comparación y verificar datos de ambas ciudades.
 - **Renderizado de elementos clave:** Se verifica la presencia de `.titulo`, `.form`, `.select`, `.modoContenedor`, `.button`.
+- **Renderizado de Footer:** Se valida que el Footer se muestre correctamente con el texto de copyright y autor.
 - **Cambio de modo de consulta:** Se valida que el cambio de modo oculta o muestra campos correctamente.
 
 #### ❌ Casos con errores y validaciones
-- **Ciudad inválida:** Ingresar texto inválido (ej: "W") y esperar mensaje de error.
+- **Ciudad inválida:** Ingresar texto inválido (ej: "W") y esperar mensaje de error específico: "Los datos ingresados son inválidos.".
 - **Comparación con un solo campo:** Solo llenar una ciudad en modo comparación y esperar validación.
 - **Formulario vacío:** Clickear buscar sin completar nada y esperar validaciones obligatorias.
 - **Ciudades duplicadas:** Ingresar "Salta" y "Salta" y mostrar advertencia.
@@ -84,9 +85,9 @@ La aplicación cuenta con pruebas end-to-end (E2E) automatizadas usando [Cypress
 
 ### 📂 Estructura de archivos de prueba
 
-- `busqueda_exitosa.cy.js`: Pruebas de búsqueda simple exitosa.
+- `busqueda_exitosa.cy.js`: Pruebas de búsqueda simple exitosa y renderizado de elementos clave y Footer.
 - `comparacion_invalida.cy.js`: Pruebas de comparación con errores y validaciones.
-- `validaciones.cy.js`: Pruebas de validaciones y errores generales.
+- `validaciones.cy.js`: Pruebas de validaciones, errores generales y mensajes de error específicos.
 
 ### ▶️ Cómo ejecutar las pruebas
 

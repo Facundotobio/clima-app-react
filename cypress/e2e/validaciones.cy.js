@@ -7,6 +7,7 @@ describe('Validaciones y errores en la búsqueda', () => {
     cy.get('[data-cy="input-ciudad"]').type('W');
     cy.get('[data-cy="boton-submit"]').click();
     cy.get('[data-cy="error"]', { timeout: 10000 }).should('exist');
+    cy.get('[data-cy="error"]').should('contain.text', 'Los datos ingresados son inválidos.');
   });
 
   it('Muestra error para números', () => {
