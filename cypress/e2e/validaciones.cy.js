@@ -23,6 +23,9 @@ describe('Validaciones y errores en la búsqueda', () => {
 
   it('No permite enviar formulario vacío', () => {
     cy.get('[data-cy="boton-submit"]').click();
-    cy.get('[data-cy="error"]', { timeout: 10000 }).should('exist');
+    cy.get('[data-cy="input-ciudad"]')
+      .then($input => {
+        expect($input[0].validationMessage).to.not.equal('');
+      });
   });
 }); 

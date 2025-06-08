@@ -100,6 +100,15 @@ La aplicación cuenta con pruebas end-to-end (E2E) automatizadas usando [Cypress
    ```
 3. Seleccionar el archivo de prueba y correrlo en el navegador.
 
+### 🤖 Integración continua (CI) con GitHub Actions
+
+El proyecto cuenta con un workflow de **GitHub Actions** que ejecuta automáticamente todas las pruebas Cypress en cada push o pull request a la rama `main`.
+
+- El workflow se encuentra en `.github/workflows/cypress.yml`.
+- Las pruebas se corren contra la versión deployada en Vercel (`https://clima-app-react-ten.vercel.app/`).
+- Si alguna prueba falla, el build será marcado como fallido y podrás revisar los logs en la pestaña "Actions" de tu repositorio.
+- Esto asegura que cualquier cambio que rompa la funcionalidad será detectado antes de hacer merge, manteniendo la calidad del proyecto.
+
 ---
 
 👨‍💻 Autor y redes de contacto
