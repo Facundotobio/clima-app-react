@@ -44,9 +44,10 @@ Brindar una herramienta práctica para consultar y comparar condiciones climáti
 
 ---
 
-## 🧪 Pruebas automatizadas (Cypress)
+## Testing 
 
-La aplicación cuenta con pruebas end-to-end (E2E) automatizadas usando [Cypress](https://www.cypress.io/), ubicadas en la carpeta `cypress/e2e/`.
+🧪 Pruebas automatizadas
+La aplicación cuenta con pruebas end-to-end (E2E) automatizadas usando Playright.
 
 ### 🎯 Objetivos de las pruebas
 - Validar funcionalidades exitosas: búsqueda y comparación de clima.
@@ -83,23 +84,9 @@ La aplicación cuenta con pruebas end-to-end (E2E) automatizadas usando [Cypress
 - En fallos: componente `.error` con mensaje explicativo.
 - En responsivo: layout cambia correctamente y mantiene funcionalidad.
 
-### 📂 Estructura de archivos de prueba
-
-- `busqueda_exitosa.cy.js`: Pruebas de búsqueda simple exitosa y renderizado de elementos clave y Footer.
-- `comparacion_invalida.cy.js`: Pruebas de comparación con errores y validaciones.
-- `validaciones.cy.js`: Pruebas de validaciones, errores generales y mensajes de error específicos.
-
-### ▶️ Cómo ejecutar las pruebas
-
-1. Instalar dependencias:
-   ```bash
-   npm install
-   ```
-2. Ejecutar Cypress:
-   ```bash
-   npx cypress open
-   ```
-3. Seleccionar el archivo de prueba y correrlo en el navegador.
+#### Pruebas de rendimiento
+La app fue sometida a pruebas de performance con Apache JMeter, las cuales pasaron exitosamente.
+El objetivo de las mismas era evaluar la capacidad de respuesta y estabilidad bajo alta demanda.
 
 ### 🤖 Integración continua (CI) con GitHub Actions
 
