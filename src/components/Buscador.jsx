@@ -46,7 +46,7 @@ export default function Buscador({ modo = 'simple', onBuscar }) {
           className={styles.select}
           data-cy="select-dias"
         >
-          {Array.from({ length: 14 }, (_, i) => i + 1).map((num) => (
+          {Array.from({ length: 3 }, (_, i) => i + 1).map((num) => (
             <option key={num} value={num}>
               {num} {num === 1 ? 'día' : 'días'}
             </option>
