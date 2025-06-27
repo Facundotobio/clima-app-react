@@ -20,7 +20,7 @@ describe('Búsqueda simple exitosa y renderizado de elementos clave', () => {
 
   it('Realiza una búsqueda exitosa', () => {
     cy.get('[data-cy="input-ciudad"]').type('Buenos Aires');
-    cy.get('[data-cy="select-dias"]').select('7 días');
+    cy.get('[data-cy="select-dias"]').select('3 días');
     cy.get('[data-cy="boton-submit"]').click();
     cy.get('[data-cy="resultado-clima"]', { timeout: 10000 }).should('exist');
     cy.get('[data-cy="diasContainer"] [data-cy="dia"]').should('have.length.at.least', 1);
